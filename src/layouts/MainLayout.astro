@@ -23,6 +23,11 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 
 <html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? 'en-us'} class="initial">
 	<head>
+	<!-- Before the closing </head> -->
+	<link
+	  rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+	/>
 		<HeadCommon />
 		<HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
 		<title>
@@ -135,5 +140,24 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 			</aside>
 		</main>
 		<Footer path={currentFile} />
+		<!-- Before the closing </body> -->
+		<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+		<script>
+		  docsearch({
+			// Your Search API Key
+			apiKey: '5c951fd1ef162f9818c1fe03d0660c7c',
+			// The index populated by the DocSearch scraper
+			indexName: 'index-nextjs',
+			// Your Algolia Application ID
+			appId: '6E9A6Y92A3',
+			// Replace inputSelector with a CSS selector
+			// matching your search input
+			inputSelector: 'div#search',
+			// Set debug to true to inspect the dropdown
+			debug: false,
+		  });
+		</script>
+		<div id="search"></div>
+
 	</body>
 </html>
