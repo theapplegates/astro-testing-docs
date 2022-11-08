@@ -17,5 +17,5 @@ export default defineConfig({
   react(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), mdx()],
-  site: `https://astro.build`
+  site: `https://docs.paulapplegate.com`
 });
