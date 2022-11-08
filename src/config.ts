@@ -36,7 +36,7 @@ export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'congo',
+	indexName: 'netlify_d214fe6f-44fe-45be-8e05-b7c81709d09b_dev_all',
 	appId: 'TXGQ85IM2A',
 	apiKey: '607313bc837efb07a9da9cf03b3fcc99',
 };
